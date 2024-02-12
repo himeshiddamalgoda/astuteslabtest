@@ -19,7 +19,7 @@ const htmlContent = `
 `;
 
 module.exports = (app) => {
-    var router = require("express").Router();
+    const router = express.Router();
     router.get('/download-pdf', (req, res) => {
   // Generate PDF from HTML content
   pdf.create(htmlContent).toBuffer((err, buffer) => {
